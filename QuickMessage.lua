@@ -19,7 +19,8 @@ local BoolValue = Instance.new("BoolValue")
 --Properties:
 
 QuickMessage.Name = "QuickMessage"
-QuickMessage.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+QuickMessage.Parent = game:WaitForChild("CoreGui")
+QuickMessage.ResetOnSpawn = false
 
 Topbar.Name = "Topbar"
 Topbar.Parent = QuickMessage
