@@ -214,9 +214,11 @@ local function NWSAMHR_fake_script() -- Add.LocalScript
 			end)
 
 			script.Parent.Parent.DeleteEnabled.Changed:Connect(function()
-				script.Parent.BackgroundColor3 = Color3.new(0.756863, 0, 0)
-				repeat wait(0) until script.Parent.Parent.DeleteEnabled.Value == false 
-				script.Parent.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+				if script.Parent.Parent.DeleteEnabled.Value == true then
+					script.Parent.BackgroundColor3 = Color3.new(0.756863, 0, 0)
+				else
+					script.Parent.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+				end
 			end)
 		end
 		coroutine.wrap(RETARD_fake_script)()
